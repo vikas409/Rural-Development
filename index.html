@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Educational And Development Society</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a773d428-a5fa-4198-b289-00cd5b557e5a.png') center/cover no-repeat;
+            min-height: 80vh;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member img {
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+        .readmore-content {
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.5s ease, opacity 0.5s ease;
+         opacity: 0;
+        }
+        .readmore-content.show {
+         max-height: 500px;
+         opacity: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-teal-700 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Rural Educational And Development Society (READS)</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-teal-200">About</a>
+                <a href="#programs" class="hover:text-teal-200">Programs</a>
+                <a href="#gallery" class="hover:text-teal-200">Gallery</a>
+                <a href="#team" class="hover:text-teal-200">Team</a>
+                <a href="#contact" class="hover:text-teal-200">Contact</a>
+                
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-white">
+        <div class="text-center px-4">
+        
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Building a Better Future Together</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Empowering communities through education, healthcare, and sustainable development initiatives.</p>
+            <div class="space-x-4">
+                <a href="#contact" class="bg-teal-600 hover:bg-teal-500 text-white px-8 py-3 rounded-lg text-lg font-medium inline-block">Donate Now</a>
+                <div class="flex space-x-8 mt-8">
+                              <div class="text-center">
+                              <span class="text-teal-600 text-4xl font-bold">50+</span>
+                               <p class="text-Whitw-600">Projects</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <span class="text-teal-600 text-4xl font-bold">75k</span>
+                            <p class="text-White-600">Lives Impacted</p>
+                            
+    
+                        </div>
+                
+               
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-teal-700">Our Mission</h2>
+                <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3c36c570-9216-48e7-8f79-32b2a5bea6f4.png" alt="Diverse group of volunteers working together in a community garden planting vegetables" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Who We Are</h3>
+                    <p class="text-gray-600 mb-6">Rural Educational And Development Society is a non-profit organisation, established in 2002 that works primarily in the domain of Education, Health, Disaster Management, Art & Culture, Water, Agriculture, Minority, Gender, Housing, Child & Youth Development,  Human Rights, Specially Abled, Right to Information & Advocacy. </p>
+                    <p class="text-gray-600 mb-6">Since its inception, READS has been actively involved in a variety of initiatives aimed at empowering marginalized communities. Through our programs, we have focused on improving access to quality education, raising awareness on health and sanitation, and promoting sustainable development practices Its primary office is in Lucknow, Uttar Pradesh</p>
+                    <p class="text-gray-600 mb-6">Our team works in partnership with local communities to identify needs and implement impactful programs in education, healthcare, and economic development.</p>
+                    
+                     <button id="showContentbtn" class="bg-white hover:bg-gray-100 text-teal-600 px-8 py-3 rounded-lg text-lg font-medium inline-block">More About Aim & Mission</button >
+                      <div id="extraContent" class="hidden mt-6 p-4 ">
+                      <h3 class="text-xl font-bold text-white-800 mb-2">Vision</h3>
+                      <p class="text-white-700">To create a healthier, more educated, and empowered rural society, where every individual has access to essential knowledge and resources for a better quality of life.</p>
+                      <h3 class="text-xl font-bold text-white-800 mb-2">Mission</h3>
+                      <p class="text-white-700">To improve the lives of underserved rural communities by promoting education, health awareness, and sustainable development, while empowering women, children, and marginalized groups to achieve a better future.</p>
+                    </div>        
+                                       
+                </div>
+            </div>
+        </div>
+        <script>
+          const btn1 = document.getElementById('showContentbtn');
+         const content1 = document.getElementById('extraContent');
+
+         btn1.addEventListener('click', () => {
+              if (content1.classList.contains('hidden')) {
+              content1.classList.remove('hidden');
+              btn1.innerText = 'Hide Content ↑';} 
+             else {
+                 content1.classList.add('hidden');
+                 btn1.innerText = 'More About Aim & Mission';
+                }
+            });
+        </script>
+
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-teal-700">Our Programs</h2>
+                <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-6">We run multiple initiatives focused on creating lasting change in the communities we serve.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="program-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1c284b08-2bba-426f-a15b-51a815133828.png" alt="Children in a classroom holding books and smiling with their teacher" class="w-full h-64 object-cover"/>
+                <div class="p-6">
+                 <h3 class="text-xl font-semibold mb-3 text-gray-800">Education for All</h3>
+                <p class="text-gray-600 mb-4">
+                  Providing quality education to underprivileged children through school construction, teacher training, and scholarship programs.
+                   <span id="moreText1" class="hidden">
+                    <br />Our NGO also provides free study materials, mentorship, and digital classrooms to bridge the gap in remote villages.
+                   </span>
+                </p>
+                <button id="readMoreBtn1" class="text-teal-600 font-medium inline-block">Learn More →</button>
+                </div>
+            </div>
+
+             
+
+                
+                <!-- Program 2 -->
+                <div class="program-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bb669dfc-5d09-4b32-8ed9-70b4bb8f6f59.png" alt="Children in a classroom holding books and smiling with their teacher" class="w-full h-64 object-cover"/>
+                <div class="p-6">
+                 <h3 class="text-xl font-semibold mb-3 text-gray-800">Healthcare Access</h3>
+                <p class="text-gray-600 mb-4">
+                  The Medical Health Camp was organized to provide essential healthcare services to 
+                 underserved communities, ensuring early diagnosis, treatment, and awareness about 
+                  preventive healthcare
+                   <span id="moreText2" class="hidden">
+                    <br />The camp offered free medical check-ups, consultations, and distribution of medicines to those in need. Qualified doctors and healthcare professionals conducted screenings for common illnesses, chronic diseases, and nutritional deficiencies. Awareness sessions were held on hygiene, sanitation, disease prevention, and the importance of regular health check-ups. Special focus was given to maternal and child health, elderly care, and lifestyle diseases such as diabetes and 
+                      hypertension. Over 300 individuals benefited from the camp, receiving timely 
+                      medical intervention and health guidance. Future plans include organizing regular 
+                     health camps in rural and slum areas, collaborating with hospitals for specialized 
+                     treatments, and launching mobile health units to extend healthcare accessibility to 
+                     remote region
+                   </span>
+                </p>
+                <button id="readMoreBtn2" class="text-teal-600 font-medium inline-block">Learn More →</button>
+                </div>
+            </div>                
+                <!-- Program 3 -->
+                <div class="program-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a163f855-c34b-4535-8aa0-752a64d266ed.png" alt="Women working with agricultural tools in a field with solar panels in the background" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Rain Water Recharging Awareness Camp</h3>
+                        <p class="text-gray-600 mb-4">The above was organized to educate communities about the importance of rainwater harvesting and groundwater conservation.
+                         <span id="moreText3" class="hidden">
+                         <br /> The initiative aimed to address water scarcity issues by promoting sustainable water management practices. Experts conducted awareness sessions on various rainwater harvesting techniques, including rooftop collection, recharge pits, and check dams, to help individuals and communities implement effective water conservation methods. Demonstrations were held to showcase simple and cost-effective ways to collect and store rainwater for household and agricultural use. Informational pamphlets were distributed, and interactive discussions encouraged community participation in local water conservation efforts. Many households and institutions adopted rainwater harvesting techniques as a result of the program. Future plans include expanding awareness campaigns, collaborating with government agencies for large-scale water conservation projects, and setting up model rainwater harvesting systems in schools and public places to serve as learning centers for sustainable water management
+                         </span>
+                        </p>
+                         <button id="readMoreBtn3" class="text-teal-600 font-medium inline-block">Learn More →</button>
+                    </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <script>
+         const toggleReadMore = (id) => {
+              const moreText = document.getElementById(`moreText${id}`);
+              const btn = document.getElementById(`readMoreBtn${id}`);
+              moreText.classList.toggle('hidden');
+              btn.innerText = moreText.classList.contains('hidden') ?  'Learn More →' :'Show Less ↑' ; };
+
+        document.getElementById('readMoreBtn1').addEventListener('click', () => toggleReadMore(1));
+        document.getElementById('readMoreBtn2').addEventListener('click', () => toggleReadMore(2));
+        document.getElementById('readMoreBtn3').addEventListener('click', () => toggleReadMore(3));
+    </script>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-teal-700">Our Work</h2>
+                <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-6">See the impact of our programs through the eyes of the communities we serve.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cc144151-a4d8-4ff7-916f-2c4f32dc3727.png" alt="Children happily receiving school supplies from volunteers in a brightly painted classroom" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d354a6dd-6624-4c88-80fe-3f34fbdf9e4f.png" alt="Community members celebrating the opening of a new well with clean water access" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/93cda84b-877e-4b5d-aba6-5f1080e39581.png" alt="A mother and child smiling at a mobile health clinic with a doctor" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/481e7ddb-a61c-4dfc-b432-89ae8f358660.png" alt="A graduation ceremony for vocational training participants with certificates" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ea2975e6-0dba-409b-98fa-5a1dc08d1254.png" alt="Solar panel installation in a village with community members watching" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e8fc9cbf-7787-41d6-849f-787e0e67bc3c.png" alt="Group photo of scholarship recipients standing proudly with their new books" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-teal-700">Our Team</h2>
+                <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-6">Meet the dedicated professionals working tirelessly to make a difference.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-member text-center">
+                    <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Mrs Abhilash Dwivedi" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800">Mrs Abhilash Dwivedi</h3>
+                    <p class="text-teal-600 mb-2">President</p>
+                    <p class="text-gray-600">15+ years in non-profit leadership and social workes.</p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member text-center">
+                    <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Mrs. Preeti Singh" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800">Mrs.Preeti Singh</h3>
+                    <p class="text-teal-600 mb-2">Vice President</p>
+                    <p class="text-gray-600">10+ years in non-profit leadership and social works</p>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member text-center">
+                    <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Mrs. Ambika Shukla" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800">Mrs.Ambika Shukla</h3>
+                    <p class="text-teal-600 mb-2">Secretary</p>
+                    <p class="text-gray-600">Public relation expert with field experience across UP especially in east UP.</p>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member text-center">
+                    <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Kanhiya yadav" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800">Mr. Kanhiya Yadav</h3>
+                    <p class="text-teal-600 mb-2">Treasurer</p>
+                    <p class="text-gray-600">Ensures financial accountability and sustainability of our programs.</p>
+                </div>
+                <!-- Team Member 5 -->
+                <div class="team-member text-center">
+                    <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Mrs. Majri Singh" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800">Mrs. Majari Singh</h3>
+                    <p class="text-teal-600 mb-2">General Secretary</p>
+                    <p class="text-gray-600">Specializes in education initiatives and monitoring & evaluation.</p>
+                </div>
+            </div>
+            <!-- more team members-->
+            <div class="text-center mt-12">
+                <button  id="showContentBtn" class="inline-block px-8 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition">Meet More Team Members</button>
+                <div id="extraContent" class="hidden mt-6 p-4 bg-gray-100 rounded shadow">
+                    <section id="team" class="py-20 bg-white">
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                     <div class="container mx-auto px-4">
+                     <div class="text-center mb-16">
+                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div class="team-member text-center">
+                     <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Mrs. Pratibha Pandey" class="w-full h-full object-cover">
+                     </div>
+                     <h3 class="text-xl font-semibold text-gray-800">Mrs.Pratibha Pandey</h3>
+                     <p class="text-teal-600 mb-2">Member</p>
+                     <p class="text-gray-600">10+ years in social works and women empowerment </p>
+
+                     </div>
+                     <div class="team-member text-center">
+                     <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Mrs. Priti Tiwari" class="w-full h-full object-cover">
+                     </div>
+                     <h3 class="text-xl font-semibold text-gray-800">Mrs.Priti Tiwari</h3>
+                     <p class="text-teal-600 mb-2">Member</p>
+                     <p class="text-gray-600">10+ years in social works and women empowerment </p>
+                     </div>
+                    
+                     <div class="team-member text-center">
+                     <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                         <img src="" alt="Portrait of Mrs. Seema Pandey" class="w-full h-full object-cover">
+                     </div>
+                     <h3 class="text-xl font-semibold text-gray-800">Mrs.Seema Pandey</h3>
+                     <p class="text-teal-600 mb-2">Member</p>
+                     <p class="text-gray-600">10+ years in social works and women empowerment </p>
+                      </div>
+                     <div class="team-member text-center">
+                     <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
+                        <img src="" alt="Portrait of Mrs. Ruchi Tiwari" class="w-full h-full object-cover">
+                     </div>
+                     <h3 class="text-xl font-semibold text-gray-800">Mrs.Ruchi Tiwari</h3>
+                     <p class="text-teal-600 mb-2">Member</p>
+                     <p class="text-gray-600">10+ years in social works and women empowerment </p>
+                     </div>
+                    </section>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <script>
+         const btn = document.getElementById('showContentBtn');
+         const content = document.getElementById('extraContent');
+
+         btn.addEventListener('click', () => {
+
+          if (content.classList.contains('hidden')) {
+             content.classList.remove('hidden');
+             btn.innerText = 'Hide Content ↑';  // Button text bhi change karo
+            } else {
+             content.classList.add('hidden');
+             btn.innerText = 'Meet More Members →';
+            }
+            });
+        </script>
+
+
+    <!-- Contact & Donate Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4 text-teal-700">Get Involved</h2>
+                    <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Us</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"></textarea>
+                            </div>
+                            <button type="submit" class="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-6">Make a Difference</h3>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h4 class="text-xl font-medium mb-4 text-teal-700">Support Our Cause</h4>
+                            <p class="text-gray-600 mb-6">Your donation helps us continue our vital work in communities around the world.</p>
+                            
+                            <div class="space-y-4 mb-6">
+                                
+                            </div>
+                            
+                            <button class="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition">Donate Now</button>
+                            
+                            <div class="mt-6 pt-6 border-t border-gray-200">
+                                <h5 class="text-lg font-medium mb-3">Other Ways to Help</h5>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-teal-600" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                        Volunteer Opportunities
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-teal-600" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd" />
+                                        </svg>
+                                        Corporate Sponsorship
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-teal-600" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clip-rule="evenodd" />
+                                        </svg>
+                                        Fundraising Events
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Rural And Educational Society(READS)</h3>
+                    <p class="text-teal-200">Creating sustainable change through community empowerment.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-teal-200 hover:text-white">About Us</a></li>
+                        <li><a href="#programs" class="text-teal-200 hover:text-white">Our Programs</a></li>
+                        <li><a href="#gallery" class="text-teal-200 hover:text-white">Gallery</a></li>
+                        <li><a href="#contact" class="text-teal-200 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                            Naya Tara Ka Purva, Tiwariganj, Saraswati Dental College, Behind Faizabad Road, Lucknow-226028 (U.P.)
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            +91 9473826800
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            ruraleducation2002@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Stay Connected</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-teal-800 p-2 rounded-full hover:bg-teal-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-teal-800 p-2 rounded-full hover:bg-teal-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-teal-800 p-2 rounded-full hover:bg-teal-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-teal-800 p-2 rounded-full hover:bg-teal-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-teal-800 mt-8 pt-8 text-center text-teal-300">
+                <p>© 2025 READS. All rights reserved.</p>
+                <div class="mt-2 space-x-6">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Annual Reports</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            document.querySelector('.hidden').classList.toggle('hidden');
+        });
+        
+        // Other amount donation field toggle
+        document.querySelectorAll('input[name="donation"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const otherAmount = document.getElementById('otherAmount');
+                otherAmount.disabled = this.value !== 'other';
+                if (!otherAmount.disabled) {
+                    otherAmount.focus();
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
