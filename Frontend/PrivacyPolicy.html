@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Policy | READS Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- HEADER -->
+  <header class="bg-teal-600 text-white py-6 shadow-md">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-3xl font-bold">Privacy Policy</h1>
+      <p class="text-sm text-blue-200">Last Updated: July 21, 2025</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 max-w-5xl mx-auto px-4 py-10 space-y-8 leading-relaxed text-justify">
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Introduction</h2>
+      <p>
+        Welcome to <strong>READS Foundation</strong>. We value your privacy and are committed to protecting your personal information.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Information We Collect</h2>
+      <p>
+        We may collect information such as your name, email address, and other details when you donate, subscribe to our newsletter, or contact us through our website.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Use of Information</h2>
+      <p>
+        Your information helps us process donations, send updates, and improve our services. We do not sell or rent your personal information to third parties.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Cookies</h2>
+      <p>
+        Our website uses cookies to enhance your experience and analyze site usage. You can disable cookies through your browser settings.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Third-Party Links</h2>
+      <p>
+        Our website may contain links to external sites. We are not responsible for the privacy practices or content of those sites.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Data Security</h2>
+      <p>
+        We implement reasonable security measures to protect your information but cannot guarantee absolute security.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Policy Changes</h2>
+      <p>
+        We may update this Privacy Policy periodically. Changes will be posted on this page.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
+      <p>
+        For any questions or concerns regarding this Privacy Policy, please email us at:
+        <a href="mailto:info@readsfoundation.org" class="text-blue-600 underline">info@readsfoundation.org</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-200 text-gray-600 py-4">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm">
+      &copy; 2025 READS Foundation. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollToTopBtn" class="hidden fixed bottom-6 right-6 bg-teal-600 text-white p-3 rounded-full shadow hover:bg-blue-800 transition">
+    ↑
+  </button>
+
+  <script>
+    // Show scroll to top button
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.classList.remove("hidden");
+      } else {
+        scrollBtn.classList.add("hidden");
+      }
+    };
+
+    // Scroll to top when clicked
+    scrollBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
