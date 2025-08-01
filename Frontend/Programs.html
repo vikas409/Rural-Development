@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!-- Programs Section -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-teal-700">Our Programs</h2>
+                <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-6">We run multiple initiatives focused on creating lasting change in the communities we serve.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="program-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1c284b08-2bba-426f-a15b-51a815133828.png" alt="Children in a classroom holding books and smiling with their teacher" class="w-full h-64 object-cover"/>
+                <div class="p-6">
+                 <h3 class="text-xl font-semibold mb-3 text-gray-800">Education for All</h3>
+                <p class="text-gray-600 mb-4">
+                  Providing quality education to underprivileged children through school construction, teacher training, and scholarship programs.
+                   <span id="moreText1" class="hidden">
+                    <br />Our NGO also provides free study materials, mentorship, and digital classrooms to bridge the gap in remote villages.
+                   </span>
+                </p>
+                <button id="readMoreBtn1" class="text-teal-600 font-medium inline-block">Learn More →</button>
+                </div>
+            </div>
+
+             
+
+                
+                <!-- Program 2 -->
+                <div class="program-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bb669dfc-5d09-4b32-8ed9-70b4bb8f6f59.png" alt="Children in a classroom holding books and smiling with their teacher" class="w-full h-64 object-cover"/>
+                <div class="p-6">
+                 <h3 class="text-xl font-semibold mb-3 text-gray-800">Healthcare Access</h3>
+                <p class="text-gray-600 mb-4">
+                  The Medical Health Camp was organized to provide essential healthcare services to 
+                 underserved communities, ensuring early diagnosis, treatment, and awareness about 
+                  preventive healthcare
+                   <span id="moreText2" class="hidden">
+                    <br />The camp offered free medical check-ups, consultations, and distribution of medicines to those in need. Qualified doctors and healthcare professionals conducted screenings for common illnesses, chronic diseases, and nutritional deficiencies. Awareness sessions were held on hygiene, sanitation, disease prevention, and the importance of regular health check-ups. Special focus was given to maternal and child health, elderly care, and lifestyle diseases such as diabetes and 
+                      hypertension. Over 300 individuals benefited from the camp, receiving timely 
+                      medical intervention and health guidance. Future plans include organizing regular 
+                     health camps in rural and slum areas, collaborating with hospitals for specialized 
+                     treatments, and launching mobile health units to extend healthcare accessibility to 
+                     remote region
+                   </span>
+                </p>
+                <button id="readMoreBtn2" class="text-teal-600 font-medium inline-block">Learn More →</button>
+                </div>
+            </div>                
+                <!-- Program 3 -->
+                <div class="program-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a163f855-c34b-4535-8aa0-752a64d266ed.png" alt="Women working with agricultural tools in a field with solar panels in the background" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Rain Water Recharging Awareness Camp</h3>
+                        <p class="text-gray-600 mb-4">The above was organized to educate communities about the importance of rainwater harvesting and groundwater conservation.
+                         <span id="moreText3" class="hidden">
+                         <br /> The initiative aimed to address water scarcity issues by promoting sustainable water management practices. Experts conducted awareness sessions on various rainwater harvesting techniques, including rooftop collection, recharge pits, and check dams, to help individuals and communities implement effective water conservation methods. Demonstrations were held to showcase simple and cost-effective ways to collect and store rainwater for household and agricultural use. Informational pamphlets were distributed, and interactive discussions encouraged community participation in local water conservation efforts. Many households and institutions adopted rainwater harvesting techniques as a result of the program. Future plans include expanding awareness campaigns, collaborating with government agencies for large-scale water conservation projects, and setting up model rainwater harvesting systems in schools and public places to serve as learning centers for sustainable water management
+                         </span>
+                        </p>
+                         <button id="readMoreBtn3" class="text-teal-600 font-medium inline-block">Learn More →</button>
+                    </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <script>
+         const toggleReadMore = (id) => {
+              const moreText = document.getElementById(`moreText${id}`);
+              const btn = document.getElementById(`readMoreBtn${id}`);
+              moreText.classList.toggle('hidden');
+              btn.innerText = moreText.classList.contains('hidden') ?  'Learn More →' :'Show Less ↑' ; };
+
+        document.getElementById('readMoreBtn1').addEventListener('click', () => toggleReadMore(1));
+        document.getElementById('readMoreBtn2').addEventListener('click', () => toggleReadMore(2));
+        document.getElementById('readMoreBtn3').addEventListener('click', () => toggleReadMore(3));
+    </script>

@@ -41,6 +41,14 @@
          max-height: 500px;
          opacity: 1;
         }
+         .zoom {
+         animation: zoomEffect 10s ease-in-out infinite;
+        }
+        @keyframes zoomEffect {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+          100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -63,6 +71,76 @@
             </button>
         </div>
     </nav>
+
+    <nav class="bg-gray-900 flex flex-col items-center justify-center min-h-screen">
+      <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg group">
+          <div class="relative pb-[40%]"> <!-- 40% = aspect ratio -->
+      <!-- Slides Container -->
+          <div id="slider" class="absolute top-0 left-0 w-full h-full flex transition-transform duration-700 ease-in-out">
+             <img src="https://plus.unsplash.com/premium_photo-1682092585257-58d1c813d9b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TkdPfGVufDB8fDB8fHww" class="w-full h-full object-cover flex-shrink-0 zoom" alt="slide 1">
+             <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TkdPfGVufDB8fDB8fHww" class="w-full h-full object-cover flex-shrink-0 zoom" alt="slide 2">
+             <img src="https://images.unsplash.com/photo-1623122617524-18ca7a791c37?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fE5HT3xlbnwwfHwwfHx8MA%3D%3D" class="w-full h-full object-cover flex-shrink-0 zoom" alt="slide 3">
+             </div>
+            </div>
+
+             <!-- Dots -->
+          <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+           <!-- JS will create dots -->
+            </div>
+        </div>
+
+        <script>
+         const slider = document.getElementById('slider');
+         const slides = slider.querySelectorAll('img');
+         const dotsContainer = document.getElementById('dots');
+         let index = 0;
+         let interval;
+
+         // Create Dots
+            slides.forEach((_, i) => {
+                  const dot = document.createElement('button');
+                dot.className = 'w-3 h-3 bg-white bg-opacity-50 rounded-full focus:outline-none';
+                 if (i === 0) dot.classList.add('bg-opacity-100');
+                 dot.addEventListener('click', () => {
+                      index = i;
+                     updateSlider();
+                    resetInterval();
+                    });
+                 dotsContainer.appendChild(dot);
+             });
+
+             const dots = dotsContainer.querySelectorAll('button');
+
+            function updateSlider() {
+                   slider.style.transform = `translateX(-${index * 100}%)`;
+                   dots.forEach(dot => dot.classList.remove('bg-opacity-100'));
+                  dots[index].classList.add('bg-opacity-100');
+                }
+
+            function startSlider() {
+                 interval = setInterval(() => {
+                  index = (index + 1) % slides.length;
+                  updateSlider();
+                }, 3000);
+            }
+
+            function stopSlider() {
+                 clearInterval(interval);
+                }
+
+            function resetInterval() {
+                  stopSlider();
+                 startSlider();
+                }
+
+            slider.parentElement.addEventListener('mouseenter', stopSlider);
+            slider.parentElement.addEventListener('mouseleave', startSlider);
+
+            startSlider();
+        </script>
+
+    </nav>
+
 
     <!-- Hero Section -->
     <section class="hero flex items-center justify-center text-white">
@@ -277,7 +355,7 @@
                     <div class="rounded-full overflow-hidden w-48 h-48 mx-auto mb-6">
                         <img src="" alt="Portrait of Kanhiya yadav" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800">Mr. Kanhiya Yadav</h3>
+                    <h3 class="text-xl font-semibold text-gray-800">Mr. Satendra Yadav</h3>
                     <p class="text-teal-600 mb-2">Treasurer</p>
                     <p class="text-gray-600">Ensures financial accountability and sustainability of our programs.</p>
                 </div>
